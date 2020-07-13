@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    font-family: 'Merienda One', cursive;
+}
+
+@keyframes colorNsize {
+    from {
+        background-color: #14213D;
+        width: 350px;
+        height: 600px;
+    }
+    to {
+        background-color: #FCA311;
+        width: 400px;
+        height: 650px;
+        font-size: 20px;
+    }
+}
+
+body {
+    background-color: black;
+}
+
+#main-container {
+    display: grid;
+    grid-template-rows: 10% 50px 90%;
+}
+
+#input-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    min-height: 20px;
+    max-height: 20px;
+    grid-row: 1;
+}
+
+#ingredient-input {
+    background-color: #14213D;
+    padding: 15px;
+    border: 2px #FCA311 solid;
+    border-radius: 5px;
+    border-right: 0px;
+}
+
+#search {
+    background-color: #14213D;
+    padding: 15px;
+    align-items: center;
+    display: flex;
+    border: 2px #FCA311 solid;
+    border-radius: 5px;
+}
+
+#recipes-container {
+    grid-row: 2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.recipes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column;
+    width: 350px;
+    height: 600px;
+    margin: 30px;
+    border: 2px solid #E5E5E5;
+    border-radius: 20px;
+    background-color: #14213D;
+}
+
+.recipes:hover {
+    animation-name: colorNsize;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.recipes-img {
+    margin: 20px;
+    width: 75%;
+    height: 40%;
+    border-radius: 50%;
+    border: 5px solid #FCA311;
+}
+
+.ingredients-list {
+    margin-top: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    /* list-style-type: none; */
+    height: 35%;
+    align-self: flex-start;
+    margin-left: 15px;
+    font-size: 12px;
+}
+
+.ing-title {
+    align-self: flex-start;
+    margin-left: 20px;
+}
+
+.ingredients {
+    margin: 5px;
+}

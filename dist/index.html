@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div id="input-container">
-        <input type="text" id="ingredient-input">
-        <button id="search">Search!</button>
+    <div id="main-container">
+
+        <div id="input-container">
+            <input type="text" id="ingredient-input">
+            <button id="search">Search!</button>
+        </div>
+
+        <div id="recipes-container"></div>
+    
     </div>
 
-    <div id="recipes-container"></div>
-    
 
     <script id="recipes-template" type="text/x-handlebars-template">
         {{#each data}}
             <div class="recipes">
-                <a href="{{href}}" target="_blank">{{title}}</a>
-                <img src="{{thumbnail}}">
-                <ul>
+                <a class="title-link" href="{{href}}" target="_blank">{{title}}</a>
+                <img src="{{thumbnail}}" class="recipes-img">
+                <h2 class="ing-title">Ingredients:</h2>
+                <ul class="ingredients-list">
                     {{#each ingredients}}
-                        <li>{{this}}</li>
+                        <li class="ingredients">{{this}}</li>
                     {{/each}}
                 </ul>
             </div>
@@ -36,4 +44,5 @@
     <script src="Renderer.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>
