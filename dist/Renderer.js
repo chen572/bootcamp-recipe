@@ -4,7 +4,6 @@ class Renderer {
     }
 
     render(data) {
-        const newHTML = this.template({ data })
-        $('#recipes-container').empty().append(newHTML)
+        $('#recipes-container').empty().append(this.template({ data }))
     }
 }
