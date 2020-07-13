@@ -12,3 +12,7 @@ $('#recipes-container').on('click', '.recipes-img', event => {
     const ingredient = $(event.currentTarget).siblings('.ingredients-list').children()[0]
     console.log($(ingredient).text())
 })
+
+$('body').on('click', '.dark, .light', () => {
+    $('body').toggleClass('lightMode')
+})
