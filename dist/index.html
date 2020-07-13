@@ -12,7 +12,24 @@
         <input type="text" id="ingredient-input">
         <button id="search">Search!</button>
     </div>
+
+    <div id="recipes-container"></div>
     
+
+    <script id="recipes-template" type="text/x-handlebars-template">
+        {{#each data}}
+            <div class="recipes">
+                <a href="{{href}}" target="_blank">{{title}}</a>
+                <img src="{{thumbnail}}">
+                <ul>
+                    {{#each ingredients}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/each}}
+    </script>
+
     <script src="handlebars/dist/handlebars.js"></script>
     <script src="jquery/dist/jquery.js"></script>
     <script src="ApiManager.js"></script>
